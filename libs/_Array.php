@@ -76,6 +76,7 @@ class _Array
     public function first(){}
     public function last(){}
     public function filter(){}
+    public function len(){}
 
     public function clear(){
         $this->box = []; 
