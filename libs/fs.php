@@ -1,6 +1,7 @@
 <?php 
 
 // from \Illuminate\Filesystem\Filesystem.php
+// https://nodejs.org/api/fs.html
 final class fs
 {
     static public function exists($path)
@@ -180,6 +181,23 @@ final class fs
     public function put($path, $contents, $lock = false)
     {
         return file_put_contents($path, $contents, $lock ? LOCK_EX : 0);
+    }
+
+
+    public static function mkdir($path)
+    {
+
+        if (!file_exists($path))
+        {
+            return mkdir($path);
+        }
+
+        return false;
+    }
+
+    public static function input()
+    {
+        
     }
 
 
