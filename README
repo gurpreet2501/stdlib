@@ -8,8 +8,10 @@ Require
 
 // Get example 
 
-require_once '../init.php';
+# load stdlib file
+require_once 'stdlib/init.php';
 
+# now you will have access to import function. 
 import('arr');
 
 $arr = arr::init([
