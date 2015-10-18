@@ -1,3 +1,40 @@
 Require
     File name and class name should be same
-    
+
+
+## how to use 
+
+<?php 
+
+// Get example 
+
+require_once '../init.php';
+
+import('arr');
+
+$arr = arr::init([
+    'name' => 'Hero',
+    'info' => [
+        'job' => 'developer',
+        'home' => [
+            'address' => 'google',
+        ]
+    ],
+]);
+
+$name = $arr->get('name', '');
+echo $name; // Hero
+
+$job = $arr->get('info.job', '');
+echo $job; // developer
+
+$address = $arr->get('info.home.address', '');
+echo $address; // developer
+
+$password = $arr->get('info.password', '5');
+
+$arr = Arr::init(['num' => [21, 22, 23]]);
+
+echo $arr->get('num.2', 0); // 22
+
+echo $arr->get('num.3', 0); // 0

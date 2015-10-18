@@ -1,16 +1,17 @@
 <?php 
 
-import('Arr');
+
+import('arr');
 
 // Test init
 $data = ['user' => ['name' => 'Hero']];
-$arr = Arr::init($data);
+$arr = arr::init($data);
 assert($arr->all() === $data);
 
 
 // Test ref Init
 $data = ['user' => ['name' => 'Hero']];
-$arr = Arr::ref($data);
+$arr = arr::ref($data);
 
 
 
@@ -35,7 +36,7 @@ assert($arr->get('user.lol', null) === null);
 
 // Array pass By ref
 $data_ref = ['one' => ['two' => 1]];
-$arr_ref = Arr::ref($data_ref);
+$arr_ref = arr::ref($data_ref);
 
 assert($arr_ref->get('one', '') === ['two' => 1]);
 assert($data_ref['one'] === ['two' => 1]);

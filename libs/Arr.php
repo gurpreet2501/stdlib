@@ -4,11 +4,11 @@
 
 import('String');
 
-class Arr
+class arr
 {
     // Storage Box
     protected $box = array();
-    private $DOT = '.';
+    private   $DOT = '.';
 
     static public function init(Array $data)
     {
