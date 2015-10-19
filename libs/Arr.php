@@ -109,7 +109,7 @@ class arr
     protected function nested_set($key, $value)
     {
         $ref = &$this->box;
-        $tokens = explode($this->DOT, $tokens);
+        $tokens = explode($this->DOT, $key);
         $t_count = count($tokens)-1;
 
         foreach ($tokens as $key => $token)
